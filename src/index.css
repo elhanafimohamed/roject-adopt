@@ -1,3 +1,22 @@
 .list-group-item{
     margin-left: 15px;
 }
+
+
+.active{
+    border-bottom: solid blue 2px;
+   
+    
+}
+.link:hover{
+    border-bottom: solid blue 2px;
+    
+}
+.links{
+    text-align: center;
+}
+.link{
+    margin-left: 20px;
+    text-align: center;
+    text-decoration: none;
+}

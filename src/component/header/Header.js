@@ -1,19 +1,20 @@
 import React from 'react'
-// import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 const Header = () => {
   return (
     <>
-      <nav>
-         <div className="list-group">
-            <a href="/" className="list-group-item list-group-item-action active">HOME </a>
-            <a href="Javascript" className="list-group-item list-group-item-action active"> Javascript</a>
-            <a href="/Css" className="list-group-item list-group-item-action">Css</a>
-            <a href="/Html" className="list-group-item list-group-item-action disabled">HTML </a>
-        </div>
-      </nav>
-     
+
+          <Link to="/html">
+          <h1>hello</h1>
+          </Link>
+      <nav className='links'>
+              <NavLink className="link home" to='/'>Home</NavLink>
+              <NavLink className="link css" to='/Css'>css</NavLink>
+              <NavLink className="link js" to='/javascript'>javascript</NavLink>
+              <NavLink className="link html" to='/html'>html</NavLink> 
+      </nav>   
     </>
   )
 }

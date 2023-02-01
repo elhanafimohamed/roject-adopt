@@ -10,37 +10,41 @@ import Home from './pagis/Home';
 import Css from './pagis/Css';
 import Javascript from './pagis/Javascript';
 import Html from './pagis/Html';
-import Header from './component/header/Header';
+
 
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Home/>,
-    errorElement:<h1>desole....page not defund </h1>
-  },
-  {
-    path: "/Css",
-    element: <Css/>,
-  }, 
-  {
-    path: "/html",
-    element: <Html/>,
-  },
-
-  {
-    path: "/javascript",
-    element: <Javascript/>,
-  },
+    element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <Home/>,
+       errorElement:<h1>Sorry....page not found </h1>
+      },
+      {
+        path: "/Css",
+        element: <Css/>,
+      }, 
+      {
+        path: "/html",
+        element: <Html/>,
+      },
+    
+      {
+        path: "/javascript",
+        element: <Javascript/>,
+      }
+    ]
+  }
 ]);
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App/>
-    <RouterProvider router={router} />
+  <React.StrictMode>    
+    <RouterProvider router={router}/>
   </React.StrictMode>
 );
 
